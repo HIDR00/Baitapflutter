@@ -39,7 +39,7 @@ class _Bai9State extends State<Bai9> {
                         title: Text("So tu trong chuoi"),
                         content: Text("$dem"),
                       ));
-            },
+            }, //a
             child: Text("So tu"))
       ]),
     );
