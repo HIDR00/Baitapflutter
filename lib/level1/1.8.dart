@@ -32,10 +32,11 @@ class _Bai8State extends State<Bai8> {
                   List<int>.from(list.text.split(",").map((e) => int.parse(e)));
               numbers.sort();
               if (numbers.length % 2 != 0) {
-                trungvi = numbers[(numbers.length / 2).toInt() - 1] * 1.0;
+                trungvi = numbers[(numbers.length / 2).toInt()] * 1.0;
               } else if (numbers.length % 2 == 0) {
-                trungvi = (numbers[(numbers.length / 2).toInt() - 1] +
-                    numbers[(numbers.length / 2).toInt()] / 2);
+                trungvi = ((numbers[(numbers.length / 2).toInt() - 1] +
+                        numbers[(numbers.length / 2).toInt()]) /
+                    2);
               }
               showDialog(
                   context: context,
