@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:baitap/level4/4.1.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -16,7 +17,30 @@ class _Level4State extends State<Level4> {
       appBar: AppBar(
         title: Text("Level 4"),
       ),
-      body: Container(),
+      body: Container(
+        child: ListView(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai1()));
+                },
+                child: Text("Bai 1")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai1()));
+                },
+                child: Text("Bai 2")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai1()));
+                },
+                child: Text("Bai 3"))
+          ],
+        ),
+      ),
     );
   }
 }
