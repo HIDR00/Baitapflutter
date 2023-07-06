@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:baitap/level4/4.1.dart';
+import 'package:baitap/level4/4.2.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -29,7 +30,7 @@ class _Level4State extends State<Level4> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Bai1()));
+                      .push(MaterialPageRoute(builder: (context) => Bai2()));
                 },
                 child: Text("Bai 2")),
             ElevatedButton(
