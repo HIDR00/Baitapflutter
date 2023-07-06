@@ -6,6 +6,7 @@ import 'package:baitap/level3/3.4.dart';
 import 'package:baitap/level3/3.5.dart';
 import 'package:baitap/level3/3.6.dart';
 import 'package:baitap/level3/3.7.dart';
+import 'package:baitap/level3/3.10.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -70,7 +71,12 @@ class _Level3State extends State<Level3> {
                 child: Text("Bai 7")),
             ElevatedButton(onPressed: () {}, child: Text("Bai 8")),
             ElevatedButton(onPressed: () {}, child: Text("Bai 9")),
-            ElevatedButton(onPressed: () {}, child: Text("Bai 10")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai10()));
+                },
+                child: Text("Bai 10")),
           ],
         ),
       ),
