@@ -30,12 +30,14 @@ class _Bai6State extends State<Bai6> {
               String s = list.text;
               String result = "";
               s = s.trim();
-              for (int i = 1; i < s.length; i++) {
+              for (int i = 0; i < s.length; i++) {
                 if (s[i] == " ") {
                   continue;
                 }
-                if (s[i] != " " && s[i - 1] == " ") {
-                  result += " ";
+                if (i > 0) {
+                  if (s[i] != " " && s[i - 1] == " ") {
+                    result += " ";
+                  }
                 }
                 result += s[i];
               }
