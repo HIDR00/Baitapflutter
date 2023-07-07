@@ -2,21 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Bai2 extends StatefulWidget {
-  const Bai2({super.key});
+class Bai3 extends StatefulWidget {
+  const Bai3({super.key});
 
   @override
-  State<Bai2> createState() => _Bai2State();
+  State<Bai3> createState() => _Bai3State();
 }
 
-class _Bai2State extends State<Bai2> {
+class _Bai3State extends State<Bai3> {
   TextEditingController list = TextEditingController();
-  TextEditingController so = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bai 2"),
+        title: Text("Bai 3"),
       ),
       body: Column(
         children: [
@@ -27,26 +26,13 @@ class _Bai2State extends State<Bai2> {
               border: OutlineInputBorder(),
             ),
           ),
-          TextField(
-            controller: so,
-            decoration: InputDecoration(
-              hintText: "Nhap ki tu trong 1 mang",
-              border: OutlineInputBorder(),
-            ),
-          ),
           ElevatedButton(
               onPressed: () {
-                List<String> s1 =
+                List<String> s =
                     List<String>.from(list.text.split(",").map((e) => e));
-                int a = int.parse(so.text);
-                List<List<String>> result = [[]];
-                int j = 0;
-                for (int i = 0; i < s1.length; i++) {
-                  result[j].add(s1[i]);
-                  if ((i + 1) % a == 0) {
-                    result.add([]);
-                    j++;
-                  }
+                Set<String> result = {};
+                for (var i in s) {
+                  result.add(i);
                 }
                 showDialog(
                     context: context,
