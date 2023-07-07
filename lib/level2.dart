@@ -36,7 +36,12 @@ class _Level2State extends State<Level2> {
                       .push(MaterialPageRoute(builder: (context) => Bai2()));
                 },
                 child: Text("Bai 2")),
-            ElevatedButton(onPressed: () {}, child: Text("Bai 3")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai3()));
+                },
+                child: Text("Bai 3")),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context)

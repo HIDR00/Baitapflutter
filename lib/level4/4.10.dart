@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Bai3 extends StatefulWidget {
-  const Bai3({super.key});
+class Bai10 extends StatefulWidget {
+  const Bai10({super.key});
 
   @override
-  State<Bai3> createState() => _Bai3State();
+  State<Bai10> createState() => _Bai10State();
 }
 
-class _Bai3State extends State<Bai3> {
+class _Bai10State extends State<Bai10> {
   TextEditingController list1 = TextEditingController();
   TextEditingController list2 = TextEditingController();
   int max(int a, int b) {
@@ -23,9 +23,10 @@ class _Bai3State extends State<Bai3> {
   Widget build(BuildContext context) {
     TextEditingController list1 = TextEditingController();
     TextEditingController list2 = TextEditingController();
+    TextEditingController list3 = TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bai 3"),
+        title: Text("Bai 10"),
       ),
       body: Column(
         children: [
@@ -43,10 +44,18 @@ class _Bai3State extends State<Bai3> {
               border: OutlineInputBorder(),
             ),
           ),
+          TextField(
+            controller: list3,
+            decoration: InputDecoration(
+              hintText: "nhap so ki tu toi thieu",
+              border: OutlineInputBorder(),
+            ),
+          ),
           ElevatedButton(
               onPressed: () {
                 String s1 = list1.text;
                 String s2 = list2.text;
+                int s3 = int.parse(list3.text);
                 List<List<int>> F = List.generate(
                   s1.length + 1,
                   (_) => List<int>.filled(s2.length + 1, 0),
@@ -77,11 +86,17 @@ class _Bai3State extends State<Bai3> {
                     }
                   }
                 }
+                String s;
+                if (res.last >= s3) {
+                  s = res.last.toString();
+                } else {
+                  s = "Khong co";
+                }
                 showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
                           title: Text("Xau con dai nhat"),
-                          content: Text("${res.last}"),
+                          content: Text("$s"),
                         ));
               },
               child: Text("Nhan"))
