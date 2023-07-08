@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:baitap/level5/5.1.dart';
 import 'package:baitap/level5/5.2.dart';
 import 'package:baitap/level5/5.3.dart';
+import 'package:baitap/level5/5.4.dart';
 import 'package:baitap/level5/5.6.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -41,7 +42,12 @@ class _Level5State extends State<Level5> {
                       .push(MaterialPageRoute(builder: (context) => Bai3()));
                 },
                 child: Text("Bai 3")),
-            ElevatedButton(onPressed: () {}, child: Text("Bai 4")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Bai4()));
+                },
+                child: Text("Bai 4")),
             ElevatedButton(onPressed: () {}, child: Text("Bai 5")),
             ElevatedButton(
                 onPressed: () {
